@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultUser.master.cs" Inherits="TalkyTalk.DefaultUser" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Welcome!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="App_Themes/MainTheme/asset/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body class="bg-2">
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg bg-warning py-3 fixed-top">
+            <div class="container">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand jua dark-yellow mt-2" href="Index.aspx">TalkyTalk</a>
+                <div class="ms-auto mt-2 d-flex dropdown">
+                    <asp:Label ID="UsernameLabel" CssClass="me-3 mt-2" runat="server"></asp:Label>
+                    <div
+                        class="profile-pict-sm rounded"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    </div>
+                    <ul class="dropdown-menu profile-dropdown">
+                        <li>
+                            <asp:LinkButton ID="ProfileButton" CssClass="dropdown-item" runat="server" OnClick="ProfileButton_Click" CausesValidation="false">
+                                <img
+                                    src="App_Themes/MainTheme/asset/img/icon/user-icon.svg"
+                                    alt=""
+                                    class="me-1"
+                                    style="width: 20px" />
+                                Profile
+                            </asp:LinkButton>
+                        </li>
+                        <%
+                            FormsAuthenticationTicket ticket = ((FormsIdentity)this.Page.User.Identity).Ticket;
+                            string[] userData = ticket.UserData.Split('|');
+                            int userLevel = Convert.ToInt32(userData[2]);
+
+                            if (userLevel == 2)
+                            {
+                        %>
+                        <li>
+                            <a href="Admin/Index.aspx" class="dropdown-item text-dark text-decoration-none">
+                                <img
+                                    src="App_Themes/MainTheme/asset/img/icon/admin-icon.svg"
+                                    alt=""
+                                    class="me-1"
+                                    style="width: 20px" />
+                                Admin Page
+                            </a>
+                        </li>
+                        <% } %>
+                        <li>
+                            <asp:LinkButton ID="LogoutBtn" runat="server" CssClass="dropdown-item text-danger" OnClick="LogoutBtn_Click" CausesValidation="false">
+                                <img
+                                src="App_Themes/MainTheme/asset/img/icon/exit-icon.svg"
+                                alt=""
+                                class="me-1"
+                                style="width: 20px" />
+                                Logout
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container w-100 pb-5" style="padding-top: 150px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="App_Themes/MainTheme/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, serif, sans-serif;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.h-120vh {
+    height: 120vh;
+}
+
+.jua {
+    font-family: Jua, serif, sans-serif;
+}
+
+.resize-none {
+    resize: none;
+}
+
+.bg-none {
+    background: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #1978d0;
+}
+
+.text-primary {
+    color: #1978d0 !important;
+}
+
+.text-danger {
+    color: #6F1B00 !important;
+}
+
+.text-warning {
+    color: #6E4700 !important;
+}
+
+.text-validator {
+    color: #c81414;
+    font-size: 12px;
+}
+
+.text-sm {
+    font-size:12px;
+}
+
+.bg-warning {
+    background: #FFBF4A;
+}
+
+.profile-pict-sm {
+    width: 35px;
+    height: 35px;
+}
+
+.profile-pict-sm, .profile-pict-lg {
+    background: url("img//icon/avatar-icon.svg") !important;
+    background-size: cover;
+}
+
+.add-btn {
+    position: fixed;
+    right: 80px;
+    bottom: 50px;
+}
+
+.add-btn img {
+    width: 50px;
+    transition: transform .3s ease-in-out;
+}
+
+.add-btn img:hover {
+    transform: rotate(-135deg);
+}
+
+/* Signup and signin page */
+
+.bg-1 {
+    background: url("img/backgrounds/bg-1.png");
+    background-size: cover;
+}
+
+#talkytalk-img {
+    width: 50%;
+}
+
+#signup, #signin {
+    width: 45%;
+    padding: 60px 80px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#signin {
+    opacity: 0;
+}
+
+/* Home page */
+
+.bg-2 {
+    background: url("img/backgrounds/bg-2.png");
+    background-size: cover;
+}
+
+.dark-yellow {
+    color: #6F4700;
+}
+
+.dark-yellow:hover {
+    color: #452b00;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    left: -60% !important;
+}
+
+.post-desc {
+    text-align: justify;
+}
+
+/* User post page */
+
+.comment-date, .comment-desc {
+    font-size: 14px;
+}
+
+.profile-pict-lg {
+    width: 60px;
+    height: 60px;
+    background: gray;
+}
+
+#ReportBtn {
+    background: none;
+}

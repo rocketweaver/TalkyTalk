@@ -1,0 +1,332 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3642B03-D991-42C0-94FD-71599A9E7502}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TalkyTalk</RootNamespace>
+    <AssemblyName>TalkyTalk</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminBan.aspx" />
+    <Content Include="Admin\AdminComments.aspx" />
+    <Content Include="Admin\AdminPost.aspx" />
+    <Content Include="Admin\AdminReport.aspx" />
+    <Content Include="Admin\AdminUser.aspx" />
+    <Content Include="Admin\deleteBan.aspx" />
+    <Content Include="Admin\deleteComments.aspx" />
+    <Content Include="Admin\deletePosts.aspx" />
+    <Content Include="Admin\deleteUser.aspx" />
+    <Content Include="Admin\editBans.aspx" />
+    <Content Include="Admin\editUser.aspx" />
+    <Content Include="Admin\Index.aspx" />
+    <Content Include="App_Themes\MainTheme\asset\img\backgrounds\bg-1.png" />
+    <Content Include="App_Themes\MainTheme\asset\img\backgrounds\bg-2.png" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\add-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\comment-black-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\comment-white-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\delete-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\edit-black-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\edit-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\exit-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\like-black-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\like-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\like-white-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\report-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\search-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\share-black-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\share-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\share-white-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\icon\user-icon.svg" />
+    <Content Include="App_Themes\MainTheme\asset\img\illustration\logo.svg" />
+    <Content Include="App_Themes\MainTheme\asset\style.css" />
+    <Content Include="App_Themes\MainTheme\script.js" />
+    <Content Include="App_Themes\Theme1\css\all.min.css" />
+    <Content Include="App_Themes\Theme1\css\sb-admin-2.css" />
+    <Content Include="App_Themes\Theme1\css\sb-admin-2.min.css" />
+    <Content Include="App_Themes\Theme1\css\style.css" />
+    <Content Include="App_Themes\Theme1\css\styles.css" />
+    <Content Include="App_Themes\Theme1\js\bootstrap.bundle.min.js" />
+    <Content Include="App_Themes\Theme1\js\demo\chart-area-demo.js" />
+    <Content Include="App_Themes\Theme1\js\demo\chart-bar-demo.js" />
+    <Content Include="App_Themes\Theme1\js\demo\chart-pie-demo.js" />
+    <Content Include="App_Themes\Theme1\js\demo\datatables-demo.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.easing.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.easing.min.js" />
+    <Content Include="App_Themes\Theme1\js\sb-admin-2.js" />
+    <Content Include="App_Themes\Theme1\js\sb-admin-2.min.js" />
+    <Content Include="EditProfileForm.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="PostForm.aspx" />
+    <Content Include="SignForm.aspx" />
+    <Content Include="UserPost.aspx" />
+    <Content Include="UserProfile.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminBan.aspx.cs">
+      <DependentUpon>AdminBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminBan.aspx.designer.cs">
+      <DependentUpon>AdminBan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminComments.aspx.cs">
+      <DependentUpon>AdminComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminComments.aspx.designer.cs">
+      <DependentUpon>AdminComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPost.aspx.cs">
+      <DependentUpon>AdminPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPost.aspx.designer.cs">
+      <DependentUpon>AdminPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminReport.aspx.cs">
+      <DependentUpon>AdminReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminReport.aspx.designer.cs">
+      <DependentUpon>AdminReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminUser.aspx.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminUser.aspx.designer.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deleteBan.aspx.cs">
+      <DependentUpon>deleteBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteBan.aspx.designer.cs">
+      <DependentUpon>deleteBan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deleteComments.aspx.cs">
+      <DependentUpon>deleteComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteComments.aspx.designer.cs">
+      <DependentUpon>deleteComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletePosts.aspx.cs">
+      <DependentUpon>deletePosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletePosts.aspx.designer.cs">
+      <DependentUpon>deletePosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deleteUser.aspx.cs">
+      <DependentUpon>deleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteUser.aspx.designer.cs">
+      <DependentUpon>deleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\editBans.aspx.cs">
+      <DependentUpon>editBans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\editBans.aspx.designer.cs">
+      <DependentUpon>editBans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\editUser.aspx.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\editUser.aspx.designer.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultUser.Master.cs">
+      <DependentUpon>DefaultUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultUser.Master.designer.cs">
+      <DependentUpon>DefaultUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfileForm.aspx.cs">
+      <DependentUpon>EditProfileForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfileForm.aspx.designer.cs">
+      <DependentUpon>EditProfileForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariable.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Koneksi\Koneksi.cs" />
+    <Compile Include="Models\BanAdminModel.cs" />
+    <Compile Include="Models\ChartAdminModel.cs" />
+    <Compile Include="Models\CommentsAdminModel.cs" />
+    <Compile Include="Models\Default\BansModel.cs" />
+    <Compile Include="Models\Default\CommentsModel.cs" />
+    <Compile Include="Models\Default\PostsModel.cs" />
+    <Compile Include="Models\Default\ReportsModel.cs" />
+    <Compile Include="Models\Default\UsersModel.cs" />
+    <Compile Include="Models\PostAdminModel.cs" />
+    <Compile Include="Models\ReportAdminModel.cs" />
+    <Compile Include="Models\UsersAdminModels.cs" />
+    <Compile Include="PostForm.aspx.cs">
+      <DependentUpon>PostForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostForm.aspx.designer.cs">
+      <DependentUpon>PostForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignForm.aspx.cs">
+      <DependentUpon>SignForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignForm.aspx.designer.cs">
+      <DependentUpon>SignForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPost.aspx.cs">
+      <DependentUpon>UserPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPost.aspx.designer.cs">
+      <DependentUpon>UserPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DefaultUser.Master" />
+    <Content Include="AdminMaster.Master" />
+    <Content Include="Admin\deletePost.aspx~RF151612.TMP" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60245</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44320/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
